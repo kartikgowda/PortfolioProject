@@ -2,8 +2,8 @@ import React from 'react';
 
 import './Navbar.scss';
 
-const navbar = () => {
-  return <div>navbar</div>;
+const Navbar = () => {
+  return <div>Navbar</div>;
 };
 
-export default navbar;
+export default Navbar;
