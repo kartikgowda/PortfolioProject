@@ -1,17 +1,21 @@
 import React from 'react';
 
-import { About,Footer,Header,Skills,Testimonials,Work} from `./container`;
+import { About, Footer, Header, Skills, Testimonials, Work } from './container';
+
+import { Navbar } from './components';
+
 const App = () => {
-  return ( 
+  return (
     <div className="app">
-    <Header/>
-    <About/>
-    <Work/>
-    <Skills/>
-    <Testimonials/>
-    <Footer/>
-       </div> 
-  )
+      <Navbar />
+      <Header />
+      <About />
+      <Work />
+      <Skills />
+      <Testimonials />
+      <Footer />
+    </div>
+  );
 };
 
 export default App;
