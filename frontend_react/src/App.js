@@ -1,7 +1,17 @@
 import React from 'react';
 
+import { About,Footer,Header,Skills,Testimonials,Work} from `./container`;
 const App = () => {
-  return <h1>App</h1>;
+  return ( 
+    <div className="app">
+    <Header/>
+    <About/>
+    <Work/>
+    <Skills/>
+    <Testimonials/>
+    <Footer/>
+       </div> 
+  )
 };
 
 export default App;
