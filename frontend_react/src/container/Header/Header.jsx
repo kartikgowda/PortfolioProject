@@ -18,7 +18,7 @@ const scaleVariants = {
 }
 const Header = () => {
   return (
-    <div className="app__header app__flex">
+    <div id="home" className="app__header app__flex">
       {/* //? Animation for the header Sliding in */}
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -55,7 +55,15 @@ const Header = () => {
           className="overlay_circle" />
       </motion.div>
       <motion.div
-        variant={scaleVariants}>
+        variant={scaleVariants}
+        whileInView={scaleVariants.whileInView}
+        className="app__header-circles">{
+          [images.flutter, images.redux, images.sass].map((circle, index) => (
+            <div className="circle-cmp app__flex" key={`circles-${index}`}>
+              <img src={circle} alt="circle" />
+            </div>
+          ))
+        }
       </motion.div>
     </div >
   );
