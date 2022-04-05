@@ -21,5 +21,6 @@
     "titleBar.inactiveForeground": "#15202b99"
   },
   "peacock.color": "#61dafb",
-  "cSpell.words": ["abouts"]
+  "cSpell.words": ["abouts"],
+  "cSpell.ignoreWords": ["nglyj"]
 }
