@@ -5,31 +5,43 @@ import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import './About.scss';
 
-const abouts = [
-  //TODO : Title & Description + Images
-  {
-    title: 'Web Development',
-    description: 'Im a batshit Developer.',
-    imgUrl: images.about01,
-  },
-  {
-    title: 'Web Design',
-    description: 'Im a matshit Developer.',
-    imgUrl: images.about02,
-  },
-  {
-    title: 'UI/UX',
-    description: 'Im a ratshit Developer.',
-    imgUrl: images.about03,
-  },
-  {
-    title: 'App Development',
-    description: 'Im a catshit Developer.',
-    imgUrl: images.about04,
-  },
-];
+//? Importing Client JS
+import { urlFor, client } from '../../client';
+
+//! REPLACED WITH SANITY STUDIO
+// const abouts = [
+//   //TODO : Title & Description + Images
+//   {
+//     title: 'Web Development',
+//     description: 'Im a batshit Developer.',
+//     imgUrl: images.about01,
+//   },
+//   {
+//     title: 'Web Design',
+//     description: 'Im a matshit Developer.',
+//     imgUrl: images.about02,
+//   },
+//   {
+//     title: 'UI/UX',
+//     description: 'Im a ratshit Developer.',
+//     imgUrl: images.about03,
+//   },
+//   {
+//     title: 'App Development',
+//     description: 'Im a catshit Developer.',
+//     imgUrl: images.about04,
+//   },
+// ];
 
 const About = () => {
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "about"]';
+
+    client.fetch(query).then((data) => setAbouts(data));
+  }, []);
+
   return (
     <>
       {/* //TODO : Changing the Head-text to something more useful
