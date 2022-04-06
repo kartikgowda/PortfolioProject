@@ -6,6 +6,7 @@ const SocialMedia = () => {
     return (
         <div className="app__social">
             <div>
+                {/* //TODO : ADD SocialMedia Links */}
                 <BsTwitter />
             </div>
             <div>

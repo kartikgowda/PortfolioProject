@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 
 //TODO : Bracket {} Understanding for Import
 // import { images } from '../../constants';
+
+import { AppWrap } from '../../Wrapper';
 import './About.scss';
 
 //? Importing Client JS
@@ -77,4 +79,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AppWrap(About,'',);
