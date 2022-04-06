@@ -55,7 +55,7 @@ const About = () => {
 
       <div className="app__profiles">
         {abouts.map((about, index) => (
-          // // ! FIX ANIMATION TWEEN
+          //   // FIXED // ! FIX ANIMATION TWEEN
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
@@ -79,4 +79,4 @@ const About = () => {
   );
 };
 
-export default AppWrap(About,'about');
+export default AppWrap(About, 'about');

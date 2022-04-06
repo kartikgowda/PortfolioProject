@@ -12,11 +12,10 @@ const scaleVariants = {
     opacity: [0, 1],
     transition: {
       duration: 1,
-      ease: `easeInOut`
-    }
-
-  }
-}
+      ease: `easeInOut`,
+    },
+  },
+};
 const Header = () => {
   return (
     // <div id="home" className="app__header app__flex">
@@ -47,29 +46,34 @@ const Header = () => {
         </div>
       </motion.div>
       {/* //? Adding  Profile Image */}
-      <motion.div whileInView={{ opacity: [0, 1] }}
+      <motion.div
+        whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__header-img">
+        className="app__header-img"
+      >
         <img src={images.profile} alt="profile_bg" />
 
-        <motion.img whileInView={{ scale: [0, 1] }}
+        <motion.img
+          whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: `easeInOut` }}
-          src={images.circle} alt="profile_circle"
-          className="overlay_circle" />
+          src={images.circle}
+          alt="profile_circle"
+          className="overlay_circle"
+        />
       </motion.div>
       <motion.div
         variant={scaleVariants}
         whileInView={scaleVariants.whileInView}
-        className="app__header-circles">{
-          [images.flutter, images.redux, images.sass].map((circle, index) => (
-            <div className="circle-cmp app__flex" key={`circles-${index}`}>
-              <img src={circle} alt="circle" />
-            </div>
-          ))
-        }
+        className="app__header-circles"
+      >
+        {[images.flutter, images.redux, images.sass].map((circle, index) => (
+          <div className="circle-cmp app__flex" key={`circles-${index}`}>
+            <img src={circle} alt="circle" />
+          </div>
+        ))}
       </motion.div>
-    </div >
+    </div>
   );
 };
 
-export default AppWrap(Header,'home');
+export default AppWrap(Header, 'home');
