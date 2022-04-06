@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+// import { AppWrap } from '../../Wrapper';
 import { AppWrap } from '../../Wrapper';
 import { images } from '../../constants';
 import './Header.scss';
@@ -18,7 +19,9 @@ const scaleVariants = {
 }
 const Header = () => {
   return (
-    <div id="home" className="app__header app__flex">
+    // <div id="home" className="app__header app__flex">
+
+    <div className="app__header app__flex">
       {/* //? Animation for the header Sliding in */}
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -69,4 +72,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AppWrap(Header,'home',);

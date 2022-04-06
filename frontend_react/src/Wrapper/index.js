@@ -1,1 +1,1 @@
-export { default as App } from './AppWrap';
+export { default as AppWrap } from './AppWrap'; //! Changed App to AppWrap
