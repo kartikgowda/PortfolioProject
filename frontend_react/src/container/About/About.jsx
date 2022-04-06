@@ -79,4 +79,4 @@ const About = () => {
   );
 };
 
-export default AppWrap(About,'',);
+export default AppWrap(About,'about');
