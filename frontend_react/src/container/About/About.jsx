@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 //TODO : Bracket {} Understanding for Import
-import { images } from '../../constants';
+// import { images } from '../../constants';
 import './About.scss';
 
 //? Importing Client JS
